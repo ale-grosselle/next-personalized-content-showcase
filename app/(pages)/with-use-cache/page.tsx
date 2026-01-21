@@ -6,8 +6,8 @@ export default async function HomePage() {
     return (
         <>
             <RecommendedForYou
-                title="Consigliati per te"
-                subtitle="Prodotti selezionati in base alle tue preferenze"
+                title="Recommended for you"
+                subtitle="Products selected based on your preferences"
                 limit={8}
             />
             <BannerWithUseCache/>

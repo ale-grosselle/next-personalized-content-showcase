@@ -6,8 +6,8 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <RecommendedForYouClient
-        title="Consigliati per te"
-        subtitle="Prodotti selezionati in base alle tue preferenze"
+        title="Recommended for you"
+        subtitle="Products selected based on your preferences"
         limit={8}
       />
       <Banner />

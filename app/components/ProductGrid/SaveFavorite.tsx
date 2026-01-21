@@ -15,8 +15,8 @@ export function SaveFavorite({ productTitle, userId }: SaveFavoriteProps) {
     setIsSaved(!isSaved);
     alert(
       isSaved
-        ? `Rimosso dai preferiti: ${productTitle}`
-        : `Aggiunto ai preferiti: ${productTitle}`,
+        ? `Removed from favorites: ${productTitle}`
+        : `Added to favorites: ${productTitle}`,
     );
   };
 
@@ -24,7 +24,7 @@ export function SaveFavorite({ productTitle, userId }: SaveFavoriteProps) {
     <button
       onClick={handleClick}
       className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
-      title={isSaved ? 'Rimuovi dai preferiti' : 'Aggiungi ai preferiti'}
+      title={isSaved ? 'Remove from favorites' : 'Add to favorites'}
     >
       <svg
         className={`w-6 h-6 transition-colors ${
