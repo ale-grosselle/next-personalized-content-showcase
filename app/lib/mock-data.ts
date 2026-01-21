@@ -18,19 +18,19 @@ export interface Product {
 
 const titles = [
   'iPhone 15 Pro Max 256GB',
-  'Appartamento trilocale luminoso',
-  'Fiat 500 elettrica 2023',
+  'Bright three-room apartment',
+  'Fiat 500 electric 2023',
   'Mountain bike Scott Scale 29"',
-  'Divano angolare in pelle',
-  'PlayStation 5 con controller',
+  'Leather corner sofa',
+  'PlayStation 5 with controller',
   'MacBook Pro M3 14"',
-  'Scarpe Nike Air Jordan',
-  'Borsa Gucci originale',
-  'Chitarra Fender Stratocaster',
+  'Nike Air Jordan shoes',
+  'Original Gucci bag',
+  'Fender Stratocaster guitar',
   'Samsung Galaxy S24 Ultra',
-  'Bicicletta elettrica Cube',
-  'Tavolo da pranzo legno massello',
-  'Lavatrice Bosch 9kg',
+  'Cube electric bike',
+  'Solid wood dining table',
+  'Bosch 9kg washing machine',
   'Canon EOS R6 Mark II',
 ];
 
@@ -46,17 +46,17 @@ const cities = [
 ];
 
 const categories = [
-  'Elettronica',
-  'Auto e Moto',
-  'Casa e Giardino',
-  'Sport e Hobby',
-  'Moda e Accessori',
-  'Immobili',
-  'Lavoro',
-  'Servizi',
+  'Electronics',
+  'Cars & Motorcycles',
+  'Home & Garden',
+  'Sports & Hobbies',
+  'Fashion & Accessories',
+  'Real Estate',
+  'Jobs',
+  'Services',
 ];
 
-const conditions = ['Nuovo', 'Come nuovo', 'Ottimo', 'Buono', 'Discreto'];
+const conditions = ['New', 'Like new', 'Excellent', 'Good', 'Fair'];
 
 // Seeded random number generator
 function seededRandom(seed: number): () => number {
@@ -90,7 +90,7 @@ export function generateMockProduct(id: string): Product {
     title: titles[titleIndex],
     price,
     currency: 'EUR',
-    description: `${titles[titleIndex]} in vendita. Ottima opportunità per chi cerca qualità al giusto prezzo. Contattami per maggiori informazioni.`,
+    description: `${titles[titleIndex]} for sale. Great opportunity for those looking for quality at the right price. Contact me for more information.`,
     location: cities[locationIndex],
     category: categories[categoryIndex],
     condition: conditions[conditionIndex],

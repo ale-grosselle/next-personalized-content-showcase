@@ -8,7 +8,7 @@ export default function RootLayout({
 }>) {
   console.log('Hello from RootLayout app/layout.tsx');
   return (
-    <html lang="it">
+    <html lang="en">
       <body className="antialiased">{children}</body>
     </html>
   );
