@@ -1,4 +1,4 @@
-//'use cache';
+'use cache';
 import { Banner } from '@/app/components/Banner';
 
 export const BannerWithUseCache = async () => {
