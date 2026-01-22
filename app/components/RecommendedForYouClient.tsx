@@ -9,7 +9,6 @@ interface RecommendedForYouClientProps {
   title: string;
   subtitle?: string;
   limit?: number;
-  userId?: string;
 }
 
 const fetcher = async (url: string): Promise<RecommendationsResponse> => {
@@ -20,12 +19,22 @@ const fetcher = async (url: string): Promise<RecommendationsResponse> => {
   return res.json();
 };
 
+function getCookie(name: string): string | undefined {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) {
+    return parts.pop()?.split(';').shift();
+  }
+  return undefined;
+}
+
 export function RecommendedForYouClient({
   title,
   subtitle,
   limit = 8,
-  userId = 'guest',
 }: RecommendedForYouClientProps) {
+  const userId = getCookie('userId') || 'guest';
+
   const { data, error, isLoading } = useSWR<RecommendationsResponse>(
     `api/recommendations?userId=${userId}&limit=${limit}`,
     fetcher
