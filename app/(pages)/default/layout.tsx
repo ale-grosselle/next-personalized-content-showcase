@@ -8,7 +8,7 @@ export default function RootLayout({
   console.log('Hello from Page Layout app/default/layout.tsx');
   return (
     <main>
-      <h1>Hello from page Layout</h1>
+      <h1>Hello from page Layout {performance.now()}</h1>
       {children}
     </main>
   );

@@ -64,7 +64,12 @@ export function RecommendedForYouClient({
         </div>
       )}
 
-      {data && <ProductGrid products={data.recommendations} />}
+      {data && (
+        <ProductGrid
+          products={data.recommendations}
+          timestamp={data.timestamp}
+        />
+      )}
     </section>
   );
 }

@@ -23,7 +23,18 @@ export default function HomePage() {
               Server-side rendering with standard data fetching.
             </p>
           </Link>
-
+          <Link
+            href="/default-and-public-max-age"
+            className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200"
+          >
+            <h2 className="text-2xl font-semibold text-gray-900 mb-2">
+              Default Approach with Public Max-Age
+            </h2>
+            <p className="text-gray-600">
+              Server-side rendering with standard data fetching, forcing
+              cache-control headers to public with max-age of 5 minutes.
+            </p>
+          </Link>
           <Link
             href="/with-use-cache"
             className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200"
@@ -35,7 +46,6 @@ export default function HomePage() {
               Optimized server-side rendering using React&apos;s cache feature.
             </p>
           </Link>
-
           <Link
             href="/client-side"
             className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200"

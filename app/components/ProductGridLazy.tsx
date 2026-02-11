@@ -7,5 +7,7 @@ interface ProductGridLazyProps {
 }
 export const ProductGridLazy = ({ response }: ProductGridLazyProps) => {
   const data = use(response);
-  return <ProductGrid products={data.recommendations} />;
+  return (
+    <ProductGrid products={data.recommendations} timestamp={data.timestamp} />
+  );
 };
